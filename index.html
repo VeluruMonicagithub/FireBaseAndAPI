@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Firebase Book Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar: Add Book Form -->
+    <aside class="sidebar">
+      <h2>Add Book</h2>
+      <form id="bookForm">
+        <input type="text" id="title" placeholder="Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <input type="number" id="price" placeholder="Price" required />
+        <input type="text" id="imageUrl" placeholder="Image URL" required />
+        <button type="submit">Add Book</button>
+      </form>
+    </aside>
+
+    <!-- Main: Book Cards -->
+    <main class="main">
+      <h1>Books</h1>
+      <p id="statusMsg"></p>
+      <div id="booksContainer" class="grid"></div>
+    </main>
+  </div>
+
+  <!-- Simple Modal for "View Details" -->
+  <div id="detailsModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="modalImage" src="" alt="Book Cover" />
+      <h2 id="modalTitle"></h2>
+      <p><strong>Author:</strong> <span id="modalAuthor"></span></p>
+      <p><strong>Price:</strong> ₹<span id="modalPrice"></span></p>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
